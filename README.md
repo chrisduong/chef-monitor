@@ -1,5 +1,7 @@
 # monitor cookbook
 
+Inspired from [PorterTech cookbook](https://github.com/portertech/chef-monitor)
+
 Sensu Monitoring System.
 
 Install and configure a **single Sensu master** (running Redis and RabbitMQ)
