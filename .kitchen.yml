@@ -1,6 +1,10 @@
 ---
 driver:
   name: vagrant
+  http_proxy: <%= ENV['my_http_proxy'] %>
+  https_proxy: <%= ENV['my_https_proxy'] %>
+  customize:
+    memory: 1024
 
 provisioner:
   name: chef_zero
@@ -12,11 +16,33 @@ provisioner:
 #   format: doc
 
 platforms:
-  - name: ubuntu-16.04
+  - name: ubuntu-14.04
   - name: centos-7.2
 
 suites:
-  - name: default
+  - name: master-current
     run_list:
-      - recipe[monitor::default]
+      - recipe[monitor::master]
     attributes:
+      sensu:
+        version: 0.22.1-1
+      monitor:
+        master_address: 'localhost'
+    excludes:
+      - centos-7.2
+
+  - name: master-latest
+    run_list:
+      - recipe[monitor::master]
+    attributes:
+      rabbitmq:
+        esl-erlang_package: esl-erlang-compat-R1801-1.noarch.rpm?raw=true
+      esl:
+        install_method: esl
+      sensu:
+        version: 0.25.5-1
+        init_style: 'runit'
+      monitor:
+        master_address: 'localhost'
+    excludes:
+      - ubuntu-14.04
