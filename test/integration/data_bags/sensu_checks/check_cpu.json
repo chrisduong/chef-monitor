@@ -1,0 +1,6 @@
+{
+  "id": "check_cpu",
+  "type": "status",
+  "command": "check-cpu.rb",
+  "subscribers": ["all"]
+}

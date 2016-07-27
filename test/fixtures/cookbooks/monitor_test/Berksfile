@@ -1,0 +1,10 @@
+source 'https://supermarket.chef.io'
+
+metadata
+
+cookbook 'grafana'
+
+group :local do
+  cookbook 'influxdb', git: 'https://github.com/chrisduong/chef-influxdb',
+                       branch: 'chrisd13/unreleased/v4.1.0/test-datadir'
+end

@@ -1,0 +1,6 @@
+{
+  "id": "check_memory_percent",
+  "type": "status",
+  "command": "check-memory-percent.rb -w 80 -c 90",
+  "subscribers": ["all"]
+}

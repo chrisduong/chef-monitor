@@ -1,0 +1,8 @@
+{
+  "id": "metrics_memory_percent",
+  "type": "metric",
+  "command": "metrics-memory-percent.rb",
+  "subscribers": ["all"],
+  "handlers": ["metrics"],
+  "interval": 30
+}

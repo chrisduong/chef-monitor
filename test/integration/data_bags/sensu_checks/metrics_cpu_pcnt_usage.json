@@ -1,0 +1,8 @@
+{
+  "id": "metrics_cpu_pcnt_usage",
+  "type": "metric",
+  "command": "metrics-cpu-pcnt-usage.rb",
+  "subscribers": ["all"],
+  "handlers": ["metrics"],
+  "interval": 30
+}

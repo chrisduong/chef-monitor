@@ -1,0 +1,8 @@
+{
+  "id": "metrics_user_pct_usage",
+  "type": "metric",
+  "command": "metrics-user-pct-usage.rb",
+  "subscribers": ["all"],
+  "handlers": ["metrics"],
+  "interval": 30
+}

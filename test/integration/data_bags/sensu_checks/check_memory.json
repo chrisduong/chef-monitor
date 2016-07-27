@@ -1,0 +1,6 @@
+{
+  "id": "check_memory",
+  "type": "status",
+  "command": "check-memory.rb",
+  "subscribers": ["all"]
+}

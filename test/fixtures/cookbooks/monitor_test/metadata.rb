@@ -1,0 +1,11 @@
+name             'monitor_test'
+maintainer       'cduong13'
+maintainer_email 'chris.duong83@gmail.com'
+license          'Apache 2.0'
+description      'Installs/Configures monitor'
+long_description 'Installs/Configures monitor'
+version          '0.0.1'
+
+depends 'monitor'
+depends 'influxdb', '= 4.1.0'
+depends 'grafana'

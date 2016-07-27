@@ -1,0 +1,10 @@
+{
+   "name": "kitchen",
+   "default_attributes": {
+   },
+   "json_class": "Chef::Environment",
+   "description": "",
+   "chef_type": "environment",
+   "override_attributes": {
+   }
+}
